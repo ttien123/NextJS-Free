@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster"
 import Header from "@/components/header";
-
 const inter = Inter({ subsets: ['vietnamese'] })
 
 export const metadata: Metadata = {
@@ -29,6 +29,7 @@ export default function RootLayout({
           >
             <Header />
             {children}
+            <Toaster />
           </ThemeProvider>
       </body>
     </html>
